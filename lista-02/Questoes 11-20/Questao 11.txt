@@ -1,3 +1,0 @@
-É necessário que:
-- Haja a mesma quantidade de execuções de Enfileira e Desenfileira.
-- Enfileira sempre seja executado antes de Desenfileira.

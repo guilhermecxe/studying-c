@@ -45,22 +45,28 @@ int main(){
     srand(time(NULL));
 
     int valor;
-    for(int i=0; i<5; i++){
+    for(int i=0; i<100; i++){
         valor = (rand() % (10 - 1)) + 1;
         inserir_valor(&tabela, valor);
     }
 
-    printf("Exibindo os valores criados (posicao, valor):\n");
-    exibir_tabela(tabela);
+    //printf("Exibindo os valores criados (posicao, valor):\n");
+    //exibir_tabela(tabela);
 
     int posicao;
-    for(int i=0; i<5; i++){
+    for(int i=0; i<10; i++){
         valor = (rand() % (10 - 1)) + 1;
+
+        clock_t begin = clock();
         posicao = busca_sequencial(tabela, valor);
+        clock_t end = clock();
+        double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+
         if(posicao == -1)
-            printf("O valor %d nao foi encontrado\n", valor);
+            printf("O valor %d nao foi encontrado", valor);
         else
-            printf("O valor %d foi encontrado na posicao: %d\n", valor, posicao);
+            printf("O valor %d foi encontrado na posicao: %d", valor, posicao);
+        printf("\t(Tempo de busca: %f)\n", time_spent);
     }
 
     return 0;
