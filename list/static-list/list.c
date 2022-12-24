@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lista.h"
+#include "list.h"
 
 Lista* inicializar_lista(){
     Lista *lista = (Lista*) malloc(sizeof(Lista));

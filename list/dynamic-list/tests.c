@@ -1,4 +1,4 @@
-#include "lista.c"
+#include "list.c"
 #include <stdlib.h>
 
 int errors_count = 0;

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lista.h"
+#include "list.h"
 
 void inicializar_lista(Lista *lista){
     /* Cria uma lista vazia a partir de um apontador do tipo Lista. */
